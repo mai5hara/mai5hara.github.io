@@ -1,0 +1,29 @@
+//Color
+$light-green: #41D6BB;
+$black: #222222;
+$off-white: #6D7278;
+$light-gray: #6C6C6C;
+
+//Font
+$title-font : 'Raleway', sans-serif;
+$body-font: Helvetica, Arial, sans-serif;
+$l-font: 5.2rem;
+
+/*==============
+    mediaquery
+==============*/
+//layout
+$layout-width-inner: 1180px;
+//breakpoint
+$breakpoints: (
+    "sp": "screen and (max-width: 767px)",
+    "tab": "screen and (max-width: #{$layout-width-inner - 1px})",
+    "pc": "screen and (min-width: #{$layout-width-inner})",
+);
+//mediaquery
+// メディアクエリー
+@mixin mq($breakpoint: sp) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
