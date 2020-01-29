@@ -215,7 +215,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 12.0rem 30.0rem;
+  margin: 12.0rem 10.0rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -534,7 +534,7 @@ body {
           transform: rotate(45deg) translate3d(0, 0, 0);
 }
 
-.home__inner #home {
+.home__inner .home {
   height: 100vh;
   width: 100%;
   display: -webkit-box;
@@ -550,25 +550,25 @@ body {
   scroll-snap-align: start;
 }
 
-.home__inner #home .home__titles {
+.home__inner .home .home__titles {
   width: 100%;
   height: 100%;
   margin: 32vh 0 32vh 6.0rem;
 }
 
-.home__inner #home .home__titles .home__title, .home__inner #home .home__titles .home__name {
+.home__inner .home .home__titles .home__title, .home__inner .home .home__titles .home__name {
   font-size: 7.5rem;
 }
 
-.home__inner #home .home__titles .home__title__add {
+.home__inner .home .home__titles .home__title__add {
   border-right: 0.2rem solid #777;
 }
 
-.home__inner #home .home__titles .home__subtitle {
+.home__inner .home .home__titles .home__subtitle {
   font-size: 3.2rem;
 }
 
-.home__inner #home .home__scroll__btn_wrap .home__scroll__btn {
+.home__inner .home .home__scroll__btn_wrap .home__scroll__btn {
   position: absolute;
   left: 48.2%;
   top: 85%;
@@ -583,12 +583,12 @@ body {
   color: #41D6BB;
 }
 
-.home__inner #home .home__scroll__btn_wrap .home__scroll__btn a {
+.home__inner .home .home__scroll__btn_wrap .home__scroll__btn a {
   text-decoration: none;
   color: #fff;
 }
 
-.home__inner #home .home__scroll__btn_wrap .home__scroll__btn a span {
+.home__inner .home .home__scroll__btn_wrap .home__scroll__btn a span {
   position: absolute;
   top: 80%;
   left: 50%;
@@ -678,7 +678,7 @@ body {
           animation: 1.8s ease;
 }
 
-.home__inner .work__contents__wrap .work__contents__left .work__contents__border__otm, .home__inner .work__contents__wrap .work__contents__left .work__contents__border__bm {
+.home__inner .work__contents__wrap .work__contents__left .work__contents__border {
   background-color: #fff;
   height: 1px;
   opacity: 0;
@@ -733,27 +733,28 @@ body {
   margin: 3vh auto;
 }
 
-.home__inner #work__bg__bm {
+.home__inner .work__bg__bm {
   background-color: #EA4E36;
 }
 
-.home__inner #work__bg__otm {
+.home__inner .work__bg__otm {
   background-image: url("../../imgs/mountain.jpg");
 }
 
 .work__pagenation {
   position: fixed;
-  top: 85%;
-  left: 12.0rem;
+  top: 50%;
+  right: 32px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .work__pagenation a {
   display: block;
-  width: 15px;
-  height: 15px;
+  width: 13px;
+  height: 13px;
   margin: 1.3rem 0;
-  background-color: #fff;
-  border: 2px solid #6C6C6C;
+  border: 2px solid #fff;
   border-radius: 50%;
   -webkit-transition: -webkit-transform 0.2s;
   transition: -webkit-transform 0.2s;
@@ -761,34 +762,29 @@ body {
   transition: transform 0.2s, -webkit-transform 0.2s;
 }
 
-.work__pagenation a li {
-  list-style: none;
-}
-
-.work__pagenation a .active {
-  -webkit-transform: scale(1.8);
-          transform: scale(1.8);
+.work__pagenation .active {
+  background-color: #fff;
 }
 
 @media screen and (max-width: 767px) {
-  .home__inner #home {
+  .home__inner .home {
     background-size: cover;
   }
-  .home__inner #home .home__titles {
+  .home__inner .home .home__titles {
     margin: 32vh 0 32vh 3rem;
   }
-  .home__inner #home .home__titles .home__title, .home__inner #home .home__titles .home__name {
+  .home__inner .home .home__titles .home__title, .home__inner .home .home__titles .home__name {
     font-size: 4rem;
   }
-  .home__inner #home .home__titles .home__subtitle {
+  .home__inner .home .home__titles .home__subtitle {
     font-size: 2.7rem;
   }
-  .home__inner #home .home__scroll__btn_wrap .home__scroll__btn {
+  .home__inner .home .home__scroll__btn_wrap .home__scroll__btn {
     padding: 2.2rem 0.7rem;
     font-size: 1.0rem;
     left: 45%;
   }
-  .home__inner #home .home__scroll__btn_wrap .home__scroll__btn a span {
+  .home__inner .home .home__scroll__btn_wrap .home__scroll__btn a span {
     width: 12px;
     height: 12px;
     left: 31px;
@@ -994,6 +990,76 @@ body {
 
 #work__details .work__details__contents .project__design__img img {
   width: 100%;
+}
+
+#work__details .prev__next__btns {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  width: 15.0rem;
+  position: fixed;
+  top: 85%;
+  left: 4%;
+}
+
+#work__details .prev__next__btns .prev__btn {
+  font-size: 1.3rem;
+  color: #6D7278;
+  position: relative;
+  cursor: pointer;
+}
+
+#work__details .prev__next__btns .prev__btn:hover {
+  color: #28bca1;
+}
+
+#work__details .prev__next__btns .btn__prev {
+  margin-right: 1.0rem;
+}
+
+#work__details .prev__next__btns .btn__prev .fas {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+#work__details .prev__next__btns .btn__next .fas {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+#work__details .project__back__btn__wrap {
+  position: relative;
+  top: 82%;
+  left: 92%;
+  position: fixed;
+}
+
+#work__details .project__back__btn__wrap .project__back__btn {
+  background-color: #41D6BB;
+  width: 7.0rem;
+  height: 7.0rem;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+#work__details .project__back__btn__wrap .project__back__btn > span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 3.0rem;
+  background-color: #fff;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+#work__details .project__back__btn__wrap .project__back__btn > span:last-child {
+  margin: -1px 0 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+#work__details .project__back__btn__wrap .project__back__btn:hover {
+  background-color: #28bca1;
 }
 
 @media screen and (max-width: 767px) {

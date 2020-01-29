@@ -14,11 +14,6 @@
             background-position: top 35% right 50%;
             background-size: 75%;
             opacity: 0.7;
-    
-            // img {
-            //     height: 16.8rem;
-            //     width: auto;
-            // }
         }
     
         .work__details__contents {
@@ -131,7 +126,7 @@
                         #palet3 {
                             background-color: #EAEAEA;
                         }
-    
+
                         p {
                             font-size: 1.6rem;
                             padding-top: 0.5rem;
@@ -165,22 +160,81 @@
                     }
                 }
             }
+            .project__design__img {
+                margin-bottom: 5.0rem;
     
-            
-    
-                .project__design__img {
-                    margin-bottom: 5.0rem;
-    
-                    p {
-                        margin-bottom: 2.0rem ;
-                    }
-        
-                    img {
-                        width: 100%;
-                    }
+                p {
+                    margin-bottom: 2.0rem ;
                 }
+        
+                img {
+                    width: 100%;
+                }
+            }
         }
-    
+        .prev__next__btns {
+            transform: rotate(90deg);
+            width: 15.0rem;
+            position: fixed;
+            top: 85%;
+            left: 4%;
+
+            .prev__btn {
+                font-size: 1.3rem;
+                color: $off-white;
+                position: relative;
+                cursor: pointer;
+            }
+
+            .prev__btn:hover {
+                color: darken($light-green, 10%);
+            }
+
+            .btn__prev {
+                margin-right: 1.0rem;
+                .fas {
+                    transform: rotate(-90deg);
+                }
+            }
+            .btn__next {
+                .fas {
+                    transform: rotate(90deg);
+                }
+            }
+        }
+
+        .project__back__btn__wrap {
+            position: relative;
+            top: 82%;
+            left: 92%;
+            position: fixed;
+
+            .project__back__btn {
+                background-color: $light-green;
+                width: 7.0rem;
+                height: 7.0rem;
+                border-radius: 100%;
+                cursor: pointer;
+
+                >span {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 2px;
+                    height: 3.0rem;
+                    background-color: #fff;
+                    transform: rotate(-45deg);
+                }
+
+                >span:last-child {
+                    margin: -1px 0 0;
+                    transform: rotate(45deg);
+                }
+            }
+            .project__back__btn:hover {
+                background-color: darken($light-green, 10%);
+            }
+        }
 
     
 }
