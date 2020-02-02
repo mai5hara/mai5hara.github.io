@@ -240,14 +240,15 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 12.0rem;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  margin: 12.0rem 5.0rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 #about .about__wrap .contents__passion__wrap .contents__passion {
   text-align: center;
-  width: 25%;
+  width: 30%;
 }
 
 #about .about__wrap .contents__passion__wrap .contents__passion .fas {
@@ -285,15 +286,15 @@ body {
   display: -ms-flexbox;
   display: flex;
   width: 46%;
-  margin-bottom: 1.2rem;
+  margin-bottom: 2.0rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 #about .about__wrap .contents__skills__wrap .contents__skills img {
-  width: 15%;
-  margin-right: 0.8rem;
+  width: 12%;
+  margin-right: 1.5rem;
 }
 
 #about .about__wrap .contents__skills__wrap .contents__skills .skills__titles {
@@ -810,6 +811,43 @@ body {
   background-color: #fff;
 }
 
+.project__go__btn__wrap {
+  position: relative;
+  top: 86%;
+  left: 93%;
+  position: fixed;
+}
+
+.project__go__btn__wrap .project__go__btn {
+  background-color: #41D6BB;
+  width: 7.0rem;
+  height: 7.0rem;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.project__go__btn__wrap .project__go__btn > span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 8px;
+  margin: -6px 0 0;
+  background-color: #fff;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.project__go__btn__wrap .project__go__btn > span:last-child {
+  margin: -1px 0 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.project__go__btn__wrap .project__go__btn:hover {
+  background-color: #28bca1;
+}
+
 @media screen and (max-width: 767px) {
   .home__inner .home {
     background-size: cover;
@@ -861,39 +899,6 @@ body {
   .work__pagenation a {
     width: 12px;
     height: 12px;
-  }
-  .project__go__btn__wrap {
-    background-color: red;
-    position: relative;
-    top: 82%;
-    left: 92%;
-    position: fixed;
-  }
-  .project__go__btn__wrap .project__go__btn {
-    background-color: #41D6BB;
-    width: 7.0rem;
-    height: 7.0rem;
-    border-radius: 100%;
-    cursor: pointer;
-  }
-  .project__go__btn__wrap .project__go__btn > span {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 2px;
-    height: 8px;
-    margin: -6px 0 0;
-    background-color: #fff;
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-  }
-  .project__go__btn__wrap .project__go__btn > span:last-child {
-    margin: -1px 0 0;
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-  }
-  .project__go__btn__wrap .project__go__btn:hover {
-    background-color: #28bca1;
   }
 }
 

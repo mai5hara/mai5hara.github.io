@@ -288,6 +288,39 @@
         background-color: #fff;
     }
 }
+.project__go__btn__wrap {
+    position: relative;
+    top: 86%;
+    left: 93%;
+    position: fixed;
+
+    .project__go__btn {
+        background-color: $light-green;
+        width: 7.0rem;
+        height: 7.0rem;
+        border-radius: 100%;
+        cursor: pointer;
+
+        >span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 2px;
+            height: 8px;
+            margin: -6px 0 0;
+            background-color: #fff;
+            transform: rotate(-45deg);
+        }
+
+        >span:last-child {
+            margin: -1px 0 0;
+            transform: rotate(45deg);
+        }
+    }
+    .project__go__btn:hover {
+        background-color: darken($light-green, 10%);
+    }
+}
 
 
 @include mq('sp') {
@@ -356,40 +389,6 @@
         a {
             width: 12px;
             height: 12px;
-        }
-    }
-    .project__go__btn__wrap {
-        background-color: red;
-        position: relative;
-        top: 82%;
-        left: 92%;
-        position: fixed;
-
-        .project__go__btn {
-            background-color: $light-green;
-            width: 7.0rem;
-            height: 7.0rem;
-            border-radius: 100%;
-            cursor: pointer;
-
-            >span {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                width: 2px;
-                height: 8px;
-                margin: -6px 0 0;
-                background-color: #fff;
-                transform: rotate(-45deg);
-            }
-
-            >span:last-child {
-                margin: -1px 0 0;
-                transform: rotate(45deg);
-            }
-        }
-        .project__go__btn:hover {
-            background-color: darken($light-green, 10%);
         }
     }
 }

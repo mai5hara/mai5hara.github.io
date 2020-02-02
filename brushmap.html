@@ -6,42 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/0020439f70.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="script/jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $(".header").load("header.html");
+        });
+    </script>
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/reset.css">
     <title>Brush Map</title>
 </head>
 <body>
-    <header>
-        <nav id="navbar">
-            <div class="navbar__side">
-                <div class="nav__menu__hamb">
-                    <div class="nav__menu__bar1"></div>
-                    <div class="nav__menu__bar2"></div>
-                    <div class="nav__menu__bar3"></div>
-                </div>
-            </div>
-            <div class="nav__nemu__container">
-                <div class="nav__menu__list__wrap">
-                    <div class="nav__menu__list">
-                        <ul class="menu__tab__list">
-                            <li class="tab__about__list"><a href="#">ABOUT</a></li>
-                            <li class="tab__work__list"><a href="#">WORK</a>
-                                <ul class="work__list">
-                                    <li><a href="#">Brush Map</a></li>
-                                    <li><a href="#">On The Mountain</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="nav__icon">
-                        <i class="fab fa-github"></i>
-                        <i class="fab fa-instagram"></i>
-                        <i class="fab fa-linkedin"></i>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <header class="header"></header>
     <main id="work__details">
             <div class="details__topimage"></div>
             <div class="work__details__contents">
