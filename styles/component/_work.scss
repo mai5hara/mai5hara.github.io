@@ -19,7 +19,6 @@
             width: 65px;
             height: 65px;
             border-radius: 100%;
-            // bottom: 60px;
             cursor: pointer;
             overflow: hidden;
             background-color: $light-green;
@@ -42,12 +41,6 @@
     }
 
     .home {
-        // img {
-        //     width: 100%;
-        //     height: auto;
-        //     z-index: -1;
-
-        // }
 
         height: 100vh;
         width: 100%;
@@ -64,12 +57,10 @@
         .home__titles {
             width: 100%;
             height: 100%;
-            // display: fixed;
             margin: 32vh 0 32vh 6.0rem;
 
             .home__title, .home__name {
                 font-size: 7.5rem;
-                // margin: 30vh 0;
             }
             .home__title__add {
                 border-right: 0.2rem solid #777;
@@ -77,20 +68,16 @@
             
             .home__subtitle {
                 font-size: 3.2rem;
-                // margin: 48vh 0;
             }
         }
 
         .home__scroll__btn_wrap {
-            // margin: 0 auto;
-            // width: 100%;
 
             .home__scroll__btn {
                 position: absolute;
                 left: 48.2%;
                 top: 85%;
                 background-color: $light-green;
-                // border: 2px solid $light-green;
                 border-radius:50%;
                 padding: 2.4rem .6rem;
                 margin: 0 auto;
@@ -161,17 +148,24 @@
                 justify-content: space-between;
                 align-items: baseline;
                 padding-bottom: 0.5rem;
-                // opacity: 0;
 
                 .work__contents_num {
-                    color: $light-green;
+                    // color: $light-green;
                     font-size: $l-font;
+                    // opacity: 0;
                 }
-            }
 
-            .work__title__animation__otm, .work__title__animation__bm {
-                opacity: 1;
-                animation: 1.8s ease;
+                .work__category__animation {
+                    // opacity: 1;
+                    color: red;
+                    animation: fadein 1s ease 1s;
+                    animation-fill-mode: forwards;
+                }
+                @keyframes fadein {
+                    0% { color: red }
+                    100% { color: green }
+                    
+                }
             }
 
             .work__contents__border {
@@ -183,9 +177,9 @@
 
             .work__border__animation {
                 opacity: 1;
-                animation: sizeScale 1.5s ease;
+                animation: sizeScale 2.5s ease 1s;
                 width: 100%;
-                transition-delay: 3s;
+                // transition-delay: 5s;
             }
         
             @keyframes sizeScale {
@@ -193,7 +187,12 @@
             }
 
             .work__left__title {
+                
+
+                // opacity: 0;
+                transition: 0.2s;
                 margin: 20vh 0;
+                animation-name: example;
 
                 .work__project__service {
                     font-size: 2.4rem;
@@ -207,8 +206,22 @@
                 .work__project__purpse {
                     font-size: 2.0rem;
                 }
+                // .work__title__animation {
+                //     opacity: 1;
+                //     transition: fadein all cubic-bezier(.666,0,.333,1);
+                // }
             }
 
+            @-webkit-keyframes example {
+                from {opacity:  0}
+                to {opacity:  1}
+              }
+              
+              /* Standard syntax */
+              @keyframes example {
+                from {opacity:  0}
+                to {opacity:  1}
+              }
         }
 
 
@@ -343,6 +356,40 @@
         a {
             width: 12px;
             height: 12px;
+        }
+    }
+    .project__go__btn__wrap {
+        background-color: red;
+        position: relative;
+        top: 82%;
+        left: 92%;
+        position: fixed;
+
+        .project__go__btn {
+            background-color: $light-green;
+            width: 7.0rem;
+            height: 7.0rem;
+            border-radius: 100%;
+            cursor: pointer;
+
+            >span {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 2px;
+                height: 8px;
+                margin: -6px 0 0;
+                background-color: #fff;
+                transform: rotate(-45deg);
+            }
+
+            >span:last-child {
+                margin: -1px 0 0;
+                transform: rotate(45deg);
+            }
+        }
+        .project__go__btn:hover {
+            background-color: darken($light-green, 10%);
         }
     }
 }

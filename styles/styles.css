@@ -410,9 +410,13 @@ body {
   margin: auto 0;
 }
 
-#about .about__wrap .about__contents__contact .contact__info li a .fas, #about .about__wrap .about__contents__contact .contact__info li a .fab {
+#about .about__wrap .about__contents__contact .contact__info li a .fas, #about .about__wrap .about__contents__contact .contact__info li a .fab, #about .about__wrap .about__contents__contact .contact__info li a .far {
   font-size: 2.4rem;
   margin-right: 1.0rem;
+}
+
+#about .about__wrap .about__contents__contact .contact__info li a .far {
+  margin-left: 0.25rem;
 }
 
 #about .about__wrap .about__contents__contact .contact__info li a p {
@@ -483,7 +487,7 @@ body {
     margin-bottom: 2.0rem;
     margin-right: 0;
   }
-  #about .about__wrap .about__contents .about__contents__contact .contact__info .fas, #about .about__wrap .about__contents .about__contents__contact .contact__info .fab {
+  #about .about__wrap .about__contents .about__contents__contact .contact__info .fas, #about .about__wrap .about__contents .about__contents__contact .contact__info .fab, #about .about__wrap .about__contents .about__contents__contact .contact__info .far {
     font-size: 2.0rem;
   }
   #about .about__wrap .about__contents .about__contents__contact .contact__info p {
@@ -651,6 +655,7 @@ body {
   height: 100vh;
   background-color: rgba(108, 108, 108, 0.8);
   padding: 5.0rem;
+  /* Standard syntax */
 }
 
 .home__inner .work__contents__wrap .work__contents__left .work__contents__title {
@@ -668,14 +673,33 @@ body {
 }
 
 .home__inner .work__contents__wrap .work__contents__left .work__contents__title .work__contents_num {
-  color: #41D6BB;
   font-size: 5.2rem;
 }
 
-.home__inner .work__contents__wrap .work__contents__left .work__title__animation__otm, .home__inner .work__contents__wrap .work__contents__left .work__title__animation__bm {
-  opacity: 1;
-  -webkit-animation: 1.8s ease;
-          animation: 1.8s ease;
+.home__inner .work__contents__wrap .work__contents__left .work__contents__title .work__category__animation {
+  color: red;
+  -webkit-animation: fadein 1s ease 1s;
+          animation: fadein 1s ease 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fadein {
+  0% {
+    color: red;
+  }
+  100% {
+    color: green;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    color: red;
+  }
+  100% {
+    color: green;
+  }
 }
 
 .home__inner .work__contents__wrap .work__contents__left .work__contents__border {
@@ -686,11 +710,9 @@ body {
 
 .home__inner .work__contents__wrap .work__contents__left .work__border__animation {
   opacity: 1;
-  -webkit-animation: sizeScale 1.5s ease;
-          animation: sizeScale 1.5s ease;
+  -webkit-animation: sizeScale 2.5s ease 1s;
+          animation: sizeScale 2.5s ease 1s;
   width: 100%;
-  -webkit-transition-delay: 3s;
-          transition-delay: 3s;
 }
 
 @keyframes sizeScale {
@@ -700,7 +722,11 @@ body {
 }
 
 .home__inner .work__contents__wrap .work__contents__left .work__left__title {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
   margin: 20vh 0;
+  -webkit-animation-name: example;
+          animation-name: example;
 }
 
 .home__inner .work__contents__wrap .work__contents__left .work__left__title .work__project__service {
@@ -714,6 +740,24 @@ body {
 
 .home__inner .work__contents__wrap .work__contents__left .work__left__title .work__project__purpse {
   font-size: 2.0rem;
+}
+
+@-webkit-keyframes example {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes example {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .home__inner .work__contents__wrap .work__contents__right {
@@ -818,6 +862,39 @@ body {
     width: 12px;
     height: 12px;
   }
+  .project__go__btn__wrap {
+    background-color: red;
+    position: relative;
+    top: 82%;
+    left: 92%;
+    position: fixed;
+  }
+  .project__go__btn__wrap .project__go__btn {
+    background-color: #41D6BB;
+    width: 7.0rem;
+    height: 7.0rem;
+    border-radius: 100%;
+    cursor: pointer;
+  }
+  .project__go__btn__wrap .project__go__btn > span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 8px;
+    margin: -6px 0 0;
+    background-color: #fff;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  .project__go__btn__wrap .project__go__btn > span:last-child {
+    margin: -1px 0 0;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  .project__go__btn__wrap .project__go__btn:hover {
+    background-color: #28bca1;
+  }
 }
 
 #work__details {
@@ -917,11 +994,11 @@ body {
 }
 
 #work__details .work__details__contents .details__project__design .design__category__wrap img {
-  width: 35%;
+  width: 30%;
 }
 
 #work__details .work__details__contents .details__project__design .design__category__wrap .img__left {
-  margin-right: 7.0rem;
+  margin-right: 9.0rem;
 }
 
 #work__details .work__details__contents .project__design__color .design__category__wrap {
@@ -1039,6 +1116,7 @@ body {
   height: 7.0rem;
   border-radius: 100%;
   cursor: pointer;
+  z-index: 5;
 }
 
 #work__details .project__back__btn__wrap .project__back__btn > span {
@@ -1046,16 +1124,17 @@ body {
   top: 50%;
   left: 50%;
   width: 2px;
-  height: 3.0rem;
+  height: 8px;
+  margin: -6px 0 0;
   background-color: #fff;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 #work__details .project__back__btn__wrap .project__back__btn > span:last-child {
   margin: -1px 0 0;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 #work__details .project__back__btn__wrap .project__back__btn:hover {

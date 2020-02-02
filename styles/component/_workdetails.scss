@@ -92,11 +92,11 @@
                     justify-content: center;
     
                     img {
-                        width: 35%;
+                        width: 30%;
                     }
     
                     .img__left {
-                        margin-right: 7.0rem;
+                        margin-right: 9.0rem;
                     }
                 }
             }
@@ -215,20 +215,22 @@
                 height: 7.0rem;
                 border-radius: 100%;
                 cursor: pointer;
+                z-index: 5;
 
                 >span {
                     position: absolute;
                     top: 50%;
                     left: 50%;
                     width: 2px;
-                    height: 3.0rem;
+                    height: 8px;
+                    margin: -6px 0 0;
                     background-color: #fff;
-                    transform: rotate(-45deg);
+                    transform: rotate(45deg);
                 }
 
                 >span:last-child {
                     margin: -1px 0 0;
-                    transform: rotate(45deg);
+                    transform: rotate(-45deg);
                 }
             }
             .project__back__btn:hover {

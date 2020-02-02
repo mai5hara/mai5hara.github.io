@@ -211,9 +211,13 @@
                         cursor: pointer;
                         margin: auto 0;
                         
-                        .fas, .fab {
+                        .fas, .fab, .far {
                             font-size: 2.4rem;
                             margin-right: 1.0rem;
+                        }
+
+                        .far {
+                            margin-left: 0.25rem;
                         }
 
                         p {
@@ -304,7 +308,7 @@
 
                     .contact__info {
                     
-                        .fas, .fab {
+                        .fas, .fab, .far {
                             font-size: 2.0rem
                         }
                         p {
